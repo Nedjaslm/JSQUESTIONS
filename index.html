@@ -17,22 +17,22 @@
 
         <script>
             function MAIOR_MENOR() {
-            let numeros = []; // Cria uma lista vazia para armazenar os números
+            let numeros = []; 
 
-            // Loop para coletar os cinco números do usuário
+            
             for (let i = 0; i < 5; i++) {
                 let entrada = prompt(`Digite o ${i + 1}º número inteiro:`);
-                // Converte a entrada para um número inteiro
-                // É importante verificar se a entrada é um número válido para evitar erros
+                
+                
                 let num = parseInt(entrada);
                 if (isNaN(num)) {
                     alert("Entrada inválida. Por favor, digite um número inteiro.");
-                    return; // Sai da função se a entrada não for um número
+                    return; 
                 }
                 numeros.push(num);
             }
 
-            // Encontra o maior e o menor valor na lista de números
+            
             let maior_valor = Math.max(...numeros);
             let menor_valor = Math.min(...numeros);
 
@@ -51,6 +51,33 @@
                } else {
                    alert("0");
                    }
+                }
+            </script>
+
+            <button onclick="INTERVALO()">Função da Limites</button>
+            <script>
+                function INTERVALO(inicio, fim) {
+                    let somadosPares = 0;
+                    let n_Pares = [];
+                let inicio = prompt(`Digite um número de início para o intervalo:`);
+                let fim = prompt(`Digite um número limite para o intervalo:`);
+                for (let i = inicio; i <= fim; i++) {
+                    if (i % 2 === 0) {
+                        n_Pares.push(i);
+                        somadosPares += i;
+
+                        if (n_Pares.length > 0) {
+                            console.log("Números pares encontrados:", n_Pares.join(', '));
+                        } else {
+                            console.log("Nenhum número par encontrado neste intervalo."); 
+                        }
+                        console.log("Somatória dos números pares:", somaDosPares);
+                        return {
+                            pares: n_Pares,
+                            soma: somadosPares  
+                        };
+                    }
+                }
                 }
             </script>
         </div>
