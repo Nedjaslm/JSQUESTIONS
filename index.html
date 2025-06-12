@@ -40,6 +40,19 @@
             alert(`O menor valor é: ${menor_valor}`);
         }
         </script>
+
+            <button onclick="VOGAL()">Função da Vogal</button>
+            <script>
+                function VOGAL(caractere) {
+                let entrada = prompt(`Digite o uma letra qualquer:`);
+                const vogais = "aeiouAEIOU";
+               if (vogais.includes(caractere)) {
+                   return 1;
+               } else {
+                   return 0;
+                   }
+                }
+            </script>
         </div>
     </body>
 </html>
